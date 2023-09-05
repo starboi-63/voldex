@@ -8,6 +8,7 @@ from typing import List
 timeout = 30
 
 def download_ohlc(symbols: List[str]) -> DataFrame:
+    """Download open, high, low, and close data for a given list of stock symbols, and save the data in .csv format."""
     # download index data from Yahoo Finance
     indexes = yf.download(symbols, period="5y", timeout=timeout)
 
