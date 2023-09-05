@@ -23,7 +23,7 @@ def download_ohlc(symbols: List[str]) -> DataFrame:
         df.columns = ["Open", "High", "Low", "Close"]
         # save the DataFrame in .csv format
         outfile_name = f"{index}.csv"
-        outfile_path = os.path.join(os.getcwd(), "voldex", "data", "index_data", outfile_name)
+        outfile_path = os.path.join(os.getcwd(), "src", "voldex", "data", "index_data", outfile_name)
         df.to_csv(outfile_path)
 
     return indexes
