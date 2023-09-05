@@ -1,3 +1,8 @@
-import yfinance
+import yfinance as yf
 
-indexes = ["^IXIC", "^SPX", "^RUT", "^DJI"]
+timeout = 30
+index_symbols = ["^IXIC", "^SPX", "^RUT", "^DJI"]
+
+indexes = yf.download(index_symbols, period="5y", timeout=timeout)
+
+print(indexes)
